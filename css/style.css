@@ -1,0 +1,114 @@
+*  {
+    padding: 0;
+    margin:  0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #9B59B6;
+}
+
+.waapper {
+    width: 450px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.waapper header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 30px 10px;
+}
+
+.waapper header .current-date {
+    font-size: 1.45rem;
+    font-weight: 500;
+}
+
+.waapper header .icons span {
+    width: 38px;
+    height: 38px;
+    color: #878787;
+    font-size: 1.9rem;
+    cursor: pointer;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+    margin: 0 1px;
+}
+
+.waapper header .icons span:last-child {
+    margin-right: -10px;
+}
+
+.waapper header .icons span:hover {
+    background-color: #f2f2f2;
+}
+
+.waapper .calendar {
+    padding: 20px;
+}
+
+.waapper .calendar ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.waapper .calendar ul li {
+    width: calc(100% / 7);
+}
+
+.waapper .calendar .weeks {
+    font-weight: 500;
+}
+
+.waapper .calendar .days {
+    margin-bottom: 20px;
+}
+
+.waapper .calendar .days li {
+    z-index: 1;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.waapper .calendar .days li.inactive {
+    color: #aaa;
+}
+
+.waapper .calendar .days li.active {
+    color: #fff;
+}
+
+.waapper .calendar ul li {
+    position: relative;
+    width: calc(100% / 7);
+}
+
+.waapper .calendar ul li::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.waapper .calendar ul li:hover::before {
+    background-color: #f2f2f2;
+}
+
+.waapper .calendar ul li.active::before {
+    background-color: #9B59B6;
+}
+
